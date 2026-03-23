@@ -1,0 +1,281 @@
+/* IMPORTAR FONTE MODERNA */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #0a0a0a;
+    color: white;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.9);
+    position: sticky;
+    top: 0;
+}
+
+.logo h1 {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #888;
+}
+
+/* BANNER */
+.banner {
+    height: 90vh;
+    background: url('STICKER444.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-blend-mode: darken;
+    background-color: rgba(0,0,0,0.6);
+}
+
+.banner h2 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.banner p {
+    margin: 10px 0 20px;
+    letter-spacing: 2px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ccc;
+}
+
+/* PRODUTOS */
+#produtos {
+    padding: 50px 20px;
+}
+
+#produtos h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* CARD PRODUTO */
+.item {
+    background: #111;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* HOVER 🔥 */
+.item:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(255,255,255,0.1);
+}
+
+.item p {
+    padding: 15px;
+    font-weight: 600;
+}
+
+/* CONTATO */
+#contato {
+    padding: 50px 20px;
+    background: #111;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background: white;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ccc;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .banner h2 {
+        font-size: 30px;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+}
+
+#carrinho {
+    padding: 40px 20px;
+    background: #0f0f0f;
+}
+
+#carrinho ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+#carrinho li {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+}
+
+#carrinho button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px;
+    background: #25D366;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.item button {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.item button:hover {
+    background: #ccc;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+}
+
+/* IMAGENS NO MODAL */
+.modal img {
+    width: 40%;
+    border-radius: 10px;
+}
+
+/* BOTÃO FECHAR */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+#home {
+    height: 100vh; /* ocupa tela toda */
+    background-image: url("mockups/STICKER444.png");
+    background-size: cover;       /* cobre tudo */
+    background-position: center;  /* centraliza */
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5); /* escurece */
+}
+
+#home {
+    position: relative;
+}
+
+.banner {
+    position: relative;
+    color: white;
+    z-index: 1;
+}
