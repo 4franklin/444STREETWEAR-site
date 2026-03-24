@@ -74,30 +74,6 @@ function gerarMensagem() {
     return mensagem;
 }
 
-// PAGAMENTO MPESA
-function pagarMpesa() {
-    let mensagem = gerarMensagem();
-
-    mensagem += "💳 *Pagamento via M-Pesa*%0A";
-    mensagem += "Número: 845714494%0A";
-    mensagem += "Nome: AISEL FRANKLIN%0A%0A";
-    mensagem += "📩 Envie o comprovativo.";
-
-    window.open(`https://wa.me/258867335175?text=${mensagem}`);
-}
-
-// PAGAMENTO EMOLA
-function pagarEmola() {
-    let mensagem = gerarMensagem();
-
-    mensagem += "💳 *Pagamento via e-Mola*%0A";
-    mensagem += "Número: 867335175%0A";
-    mensagem += "Nome: AISEL FRANKLIN%0A%0A";
-    mensagem += "📩 Envie o comprovativo.";
-
-    window.open(`https://wa.me/258867335175?text=${mensagem}`);
-}
-
 // MODAL
 function openModal(img1, img2 = "") {
     document.getElementById("modal").style.display = "flex";
