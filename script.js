@@ -72,3 +72,8 @@ function addToCartComTamanho(btn, nome) {
 
     updateCart();
 }
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
