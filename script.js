@@ -7,8 +7,7 @@ let cart = [];
 function addToCart(nome, preco) {
     cart.push({ nome, preco });
     updateCart();
-}
-
+    
 function updateCart() {
     const lista = document.getElementById("cart-items");
     const total = document.getElementById("total");
@@ -16,9 +15,14 @@ function updateCart() {
     lista.innerHTML = "";
     let soma = 0;
 
-    cart.forEach(item => {
+    cart.forEach((item, index) => {
         const li = document.createElement("li");
-        li.textContent = `${item.nome} - ${item.preco} MT`;
+
+        li.innerHTML = `
+            ${item.nome} - ${item.preco} MT
+            <button onclick="removeItem(${index})">❌</button>
+        `;
+
         lista.appendChild(li);
         soma += item.preco;
     });
