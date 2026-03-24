@@ -49,3 +49,22 @@ function openModal(img1, img2 = "") {
 function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
+
+function addToCartComTamanho(btn, nome) {
+    const item = btn.parentElement;
+    const select = item.querySelector(".tamanho");
+
+    if (!select.value) {
+        alert("Escolha o tamanho primeiro!");
+        return;
+    }
+
+    let preco = select.value === "Regular" ? 950 : 1500;
+
+    cart.push({
+        nome: nome + " (" + select.value + ")",
+        preco: preco
+    });
+
+    updateCart();
+}
