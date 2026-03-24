@@ -4,10 +4,33 @@ function toggleMenu() {
 
 let cart = [];
 
+// ADICIONAR COM TAMANHO
+function addToCartComTamanho(btn, nome) {
+    const item = btn.parentElement;
+    const select = item.querySelector(".tamanho");
+
+    if (!select.value) {
+        alert("Escolha o tamanho primeiro!");
+        return;
+    }
+
+    let preco = select.value === "Regular" ? 950 : 1500;
+
+    cart.push({
+        nome: nome + " (" + select.value + ")",
+        preco: preco
+    });
+
+    updateCart();
+}
+
+// ADICIONAR NORMAL
 function addToCart(nome, preco) {
     cart.push({ nome, preco });
     updateCart();
-    
+}
+
+// ATUALIZAR CARRINHO
 function updateCart() {
     const lista = document.getElementById("cart-items");
     const total = document.getElementById("total");
@@ -30,54 +53,13 @@ function updateCart() {
     total.textContent = soma;
 }
 
-function checkout() {
-    let mensagem = "🛒 *Pedido 444STREETWEAR*%0A%0A";
-
-    cart.forEach(item => {
-        mensagem += `- ${item.nome} (${item.preco} MT)%0A`;
-    });
-
-    const total = document.getElementById("total").textContent;
-
-    mensagem += `%0A💰 Total: ${total} MT`;
-
-    window.open(`https://wa.me/258867335175?text=${mensagem}`);
-}
-
-function openModal(img1, img2 = "") {
-    document.getElementById("modal").style.display = "flex";
-    document.getElementById("img1").src = img1;
-    document.getElementById("img2").src = img2;
-}
-
-function closeModal() {
-    document.getElementById("modal").style.display = "none";
-}
-
-function addToCartComTamanho(btn, nome) {
-    const item = btn.parentElement;
-    const select = item.querySelector(".tamanho");
-
-    if (!select.value) {
-        alert("Escolha o tamanho primeiro!");
-        return;
-    }
-
-    let preco = select.value === "Regular" ? 950 : 1500;
-
-    cart.push({
-        nome: nome + " (" + select.value + ")",
-        preco: preco
-    });
-
-    updateCart();
-}
-
+// REMOVER ITEM
 function removeItem(index) {
     cart.splice(index, 1);
     updateCart();
 }
 
+// GERAR MENSAGEM
 function gerarMensagem() {
     let mensagem = "🛒 *Pedido 444STREETWEAR*%0A%0A";
 
@@ -92,6 +74,7 @@ function gerarMensagem() {
     return mensagem;
 }
 
+// PAGAMENTO MPESA
 function pagarMpesa() {
     let mensagem = gerarMensagem();
 
@@ -103,6 +86,7 @@ function pagarMpesa() {
     window.open(`https://wa.me/258867335175?text=${mensagem}`);
 }
 
+// PAGAMENTO EMOLA
 function pagarEmola() {
     let mensagem = gerarMensagem();
 
@@ -112,4 +96,15 @@ function pagarEmola() {
     mensagem += "📩 Envie o comprovativo.";
 
     window.open(`https://wa.me/258867335175?text=${mensagem}`);
+}
+
+// MODAL
+function openModal(img1, img2 = "") {
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("img1").src = img1;
+    document.getElementById("img2").src = img2;
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
 }
