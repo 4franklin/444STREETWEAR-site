@@ -77,3 +77,39 @@ function removeItem(index) {
     cart.splice(index, 1);
     updateCart();
 }
+
+function gerarMensagem() {
+    let mensagem = "🛒 *Pedido 444STREETWEAR*%0A%0A";
+
+    cart.forEach(item => {
+        mensagem += `- ${item.nome} (${item.preco} MT)%0A`;
+    });
+
+    const total = document.getElementById("total").textContent;
+
+    mensagem += `%0A💰 Total: ${total} MT%0A%0A`;
+
+    return mensagem;
+}
+
+function pagarMpesa() {
+    let mensagem = gerarMensagem();
+
+    mensagem += "💳 *Pagamento via M-Pesa*%0A";
+    mensagem += "Número: 845714494%0A";
+    mensagem += "Nome: AISEL FRANKLIN%0A%0A";
+    mensagem += "📩 Envie o comprovativo.";
+
+    window.open(`https://wa.me/258867335175?text=${mensagem}`);
+}
+
+function pagarEmola() {
+    let mensagem = gerarMensagem();
+
+    mensagem += "💳 *Pagamento via e-Mola*%0A";
+    mensagem += "Número: 867335175%0A";
+    mensagem += "Nome: AISEL FRANKLIN%0A%0A";
+    mensagem += "📩 Envie o comprovativo.";
+
+    window.open(`https://wa.me/258867335175?text=${mensagem}`);
+}
