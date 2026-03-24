@@ -320,15 +320,3 @@ img {
         cursor: pointer;
     }
 }
-
-.tamanho {
-    width: 100%;
-    padding: 8px;
-    margin: 10px 0;
-}
-
-#cart-items li {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
