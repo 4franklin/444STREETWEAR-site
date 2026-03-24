@@ -279,3 +279,45 @@ footer {
     color: white;
     z-index: 1;
 }
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* impede ir para o lado */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    nav {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: black;
+        width: 200px;
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 25px;
+        cursor: pointer;
+    }
+}
+
