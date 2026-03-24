@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>444STREETWEAR</title>
-
     <link rel="stylesheet" href="STY.CSS">
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="logo">
         <h1>444STREETWEAR</h1>
@@ -41,88 +39,113 @@
 
     <div class="galeria">
 
-        <!-- PRODUTO 1 -->
+        <!-- T-SHIRTS -->
         <div class="item" onclick="openModal('mockups/Wall StoriesWTF.png','mockups/Wall StoriesWTB.png')">
             <img src="mockups/Wall StoriesWTF.png">
-            <p>
-                WALL STORIES WHITE T-SHIRT<br>
-                REGULAR - 950 MT<br>
-                OVERSIZED - 1500 MT
-            </p>
-            <button onclick="addToCart('WALL STORIES WHITE T-SHIRT',1500)">Adicionar</button>
+            <p>WALL STORIES WHITE T-SHIRT</p>
+            <select class="tamanho">
+                <option value="">Escolher tamanho</option>
+                <option value="Regular">Regular - 950 MT</option>
+                <option value="Oversized">Oversized - 1500 MT</option>
+            </select>
+            <button onclick="event.stopPropagation(); addToCartComTamanho(this,'WALL STORIES WHITE T-SHIRT')">Adicionar</button>
         </div>
 
-        <!-- PRODUTO 2 -->
         <div class="item" onclick="openModal('mockups/Wall Stories BKF.png','mockups/Wall StoriesBKB.png')">
             <img src="mockups/Wall Stories BKF.png">
-            <p>
-                WALL STORIES BLACK T-SHIRT<br>
-                REGULAR - 950 MT<br>
-                OVERSIZED - 1500 MT
-            </p>
-            <button onclick="addToCart('WALL STORIES BLACK T-SHIRT',1500)">Adicionar</button>
+            <p>WALL STORIES BLACK T-SHIRT</p>
+            <select class="tamanho">
+                <option value="">Escolher tamanho</option>
+                <option value="Regular">Regular - 950 MT</option>
+                <option value="Oversized">Oversized - 1500 MT</option>
+            </select>
+            <button onclick="event.stopPropagation(); addToCartComTamanho(this,'WALL STORIES BLACK T-SHIRT')">Adicionar</button>
+        </div>
+
+        <div class="item" onclick="openModal('mockups/PEACE FRNT.png','mockups/PEACE BACK.png')">
+            <img src="mockups/PEACE FRNT.png">
+            <p>PEACE T-SHIRT</p>
+            <select class="tamanho">
+                <option value="">Escolher tamanho</option>
+                <option value="Regular">Regular - 950 MT</option>
+                <option value="Oversized">Oversized - 1500 MT</option>
+            </select>
+            <button onclick="event.stopPropagation(); addToCartComTamanho(this,'PEACE T-SHIRT')">Adicionar</button>
+        </div>
+
+        <div class="item" onclick="openModal('mockups/REAL FROT.png','mockups/REAL BACK.png')">
+            <img src="mockups/REAL FROT.png">
+            <p>REAL NEVER DIE T-SHIRT</p>
+            <select class="tamanho">
+                <option value="">Escolher tamanho</option>
+                <option value="Regular">Regular - 950 MT</option>
+                <option value="Oversized">Oversized - 1500 MT</option>
+            </select>
+            <button onclick="event.stopPropagation(); addToCartComTamanho(this,'REAL NEVER DIE T-SHIRT')">Adicionar</button>
+        </div>
+
+        <div class="item" onclick="openModal('mockups/CLOSE FRONT.png','mockups/CLOSE BACK.png')">
+            <img src="mockups/CLOSE FRONT.png">
+            <p>CLOSE MY EYES T-SHIRT</p>
+            <select class="tamanho">
+                <option value="">Escolher tamanho</option>
+                <option value="Regular">Regular - 950 MT</option>
+                <option value="Oversized">Oversized - 1500 MT</option>
+            </select>
+            <button onclick="event.stopPropagation(); addToCartComTamanho(this,'CLOSE MY EYES T-SHIRT')">Adicionar</button>
+        </div>
+
+        <div class="item" onclick="openModal('mockups/IDPDC FRONT.png','mockups/IDPDC BACK.png')">
+            <img src="mockups/IDPDC FRONT.png">
+            <p>INDEPENDENCE T-SHIRT</p>
+            <select class="tamanho">
+                <option value="">Escolher tamanho</option>
+                <option value="Regular">Regular - 950 MT</option>
+                <option value="Oversized">Oversized - 1500 MT</option>
+            </select>
+            <button onclick="event.stopPropagation(); addToCartComTamanho(this,'INDEPENDENCE T-SHIRT')">Adicionar</button>
+        </div>
+
+        <div class="item" onclick="openModal('mockups/INE FRONT.png','mockups/INE BACK.png')">
+            <img src="mockups/INE FRONT.png">
+            <p>INEFFABLE T-SHIRT</p>
+            <select class="tamanho">
+                <option value="">Escolher tamanho</option>
+                <option value="Regular">Regular - 950 MT</option>
+                <option value="Oversized">Oversized - 1500 MT</option>
+            </select>
+            <button onclick="event.stopPropagation(); addToCartComTamanho(this,'INEFFABLE T-SHIRT')">Adicionar</button>
         </div>
 
         <!-- CAPS -->
         <div class="item" onclick="openModal('mockups/RULES.png')">
             <img src="mockups/RULES.png">
             <p>STREET SYMBOLS CAP - 599 MT</p>
-            <button onclick="addToCart('STREET SYMBOLS CAP',599)">Adicionar</button>
+            <button onclick="event.stopPropagation(); addToCart('STREET SYMBOLS CAP',599)">Adicionar</button>
         </div>
 
         <div class="item" onclick="openModal('mockups/THE STREETS.png')">
             <img src="mockups/THE STREETS.png">
             <p>STREET POWER CAP - 599 MT</p>
-            <button onclick="addToCart('STREET POWER CAP',599)">Adicionar</button>
+            <button onclick="event.stopPropagation(); addToCart('STREET POWER CAP',599)">Adicionar</button>
         </div>
 
         <div class="item" onclick="openModal('mockups/LIFESTYLE.png')">
             <img src="mockups/LIFESTYLE.png">
             <p>CITY LIFE CAP - 599 MT</p>
-            <button onclick="addToCart('CITY LIFE CAP',599)">Adicionar</button>
+            <button onclick="event.stopPropagation(); addToCart('CITY LIFE CAP',599)">Adicionar</button>
         </div>
 
         <div class="item" onclick="openModal('mockups/NO LIMITS.png')">
             <img src="mockups/NO LIMITS.png">
             <p>NO LIMITS CAP - 599 MT</p>
-            <button onclick="addToCart('NO LIMITS CAP',599)">Adicionar</button>
+            <button onclick="event.stopPropagation(); addToCart('NO LIMITS CAP',599)">Adicionar</button>
         </div>
 
         <div class="item" onclick="openModal('mockups/ATIRUDE.png')">
             <img src="mockups/ATIRUDE.png">
             <p>ATTITUDE CAP - 599 MT</p>
-            <button onclick="addToCart('ATTITUDE CAP',599)">Adicionar</button>
-        </div>
-
-        <!-- T-SHIRTS -->
-        <div class="item" onclick="openModal('mockups/PEACE FRNT.png','mockups/PEACE BACK.png')">
-            <img src="mockups/PEACE FRNT.png">
-            <p>PEACE T-SHIRT</p>
-            <button onclick="addToCart('PEACE T-SHIRT',1500)">Adicionar</button>
-        </div>
-
-        <div class="item" onclick="openModal('mockups/REAL FROT.png','mockups/REAL BACK.png')">
-            <img src="mockups/REAL FROT.png">
-            <p>REAL NEVER DIE T-SHIRT</p>
-            <button onclick="addToCart('REAL NEVER DIE T-SHIRT',1500)">Adicionar</button>
-        </div>
-
-        <div class="item" onclick="openModal('mockups/CLOSE FRONT.png','mockups/CLOSE BACK.png')">
-            <img src="mockups/CLOSE FRONT.png">
-            <p>CLOSE MY EYES T-SHIRT</p>
-            <button onclick="addToCart('CLOSE MY EYES T-SHIRT',1500)">Adicionar</button>
-        </div>
-
-        <div class="item" onclick="openModal('mockups/IDPDC FRONT.png','mockups/IDPDC BACK.png')">
-            <img src="mockups/IDPDC FRONT.png">
-            <p>INDEPENDENCE T-SHIRT</p>
-            <button onclick="addToCart('INDEPENDENCE T-SHIRT',1500)">Adicionar</button>
-        </div>
-
-        <div class="item" onclick="openModal('mockups/INE FRONT.png','mockups/INE BACK.png')">
-            <img src="mockups/INE FRONT.png">
-            <p>INEFFABLE T-SHIRT</p>
-            <button onclick="addToCart('INEFFABLE T-SHIRT',1500)">Adicionar</button>
+            <button onclick="event.stopPropagation(); addToCart('ATTITUDE CAP',599)">Adicionar</button>
         </div>
 
     </div>
@@ -134,7 +157,11 @@
     <ul id="cart-items"></ul>
     <h3>Total: <span id="total">0</span> MT</h3>
 
-    <button onclick="checkout()">Finalizar no WhatsApp</button>
+    <div class="pagamento">
+        <h3>💳 Pagamento</h3>
+        <button onclick="pagarMpesa()">Pagar com M-Pesa</button>
+        <button onclick="pagarEmola()">Pagar com e-Mola</button>
+    </div>
 </section>
 
 <!-- MODAL -->
@@ -144,14 +171,10 @@
     <img id="img2">
 </div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
-<!-- FOOTER -->
 <footer>
     <p>© 2026 444STREETWEAR</p>
 </footer>
 
-<!-- JS -->
 <script src="script.js"></script>
 
 </body>
