@@ -107,3 +107,45 @@ function checkout() {
     // 👉 ESTA LINHA É A MAIS IMPORTANTE
     window.location.href = `https://wa.me/258867335175?text=${encodeURIComponent(mensagem)}`;
 }
+
+function pagarMpesa() {
+    if (cart.length === 0) {
+        alert("Carrinho vazio!");
+        return;
+    }
+
+    let mensagem = "🛒 Pedido 444STREETWEAR\n\n";
+
+    cart.forEach(item => {
+        mensagem += `- ${item.nome} (${item.preco} MT)\n`;
+    });
+
+    let total = document.getElementById("total").textContent;
+
+    mensagem += `\n💰 Total: ${total} MT\n\n`;
+    mensagem += "💳 Pagamento via M-Pesa\n";
+    mensagem += "Número: 845714494\n";
+
+    window.location.href = `https://wa.me/258867335175?text=${encodeURIComponent(mensagem)}`;
+}
+
+function pagarEmola() {
+    if (cart.length === 0) {
+        alert("Carrinho vazio!");
+        return;
+    }
+
+    let mensagem = "🛒 Pedido 444STREETWEAR\n\n";
+
+    cart.forEach(item => {
+        mensagem += `- ${item.nome} (${item.preco} MT)\n`;
+    });
+
+    let total = document.getElementById("total").textContent;
+
+    mensagem += `\n💰 Total: ${total} MT\n\n`;
+    mensagem += "💳 Pagamento via e-Mola\n";
+    mensagem += "Número: 867335175\n";
+
+    window.location.href = `https://wa.me/258867335175?text=${encodeURIComponent(mensagem)}`;
+}
