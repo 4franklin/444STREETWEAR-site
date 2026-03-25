@@ -86,24 +86,5 @@ function closeModal() {
 }
 
 function checkout() {
-    if (cart.length === 0) {
-        alert("Carrinho vazio!");
-        return;
-    }
-
-    let mensagem = "🛒 Pedido 444STREETWEAR\n\n";
-
-    cart.forEach(item => {
-        mensagem += `- ${item.nome} (${item.preco} MT)\n`;
-    });
-
-    const total = document.getElementById("total").textContent;
-
-    mensagem += `\n💰 Total: ${total} MT\n\n`;
-    mensagem += "💳 Pagamento:\n";
-    mensagem += "M-Pesa: 845714494\n";
-    mensagem += "e-Mola: 867335175\n";
-
-    // 👉 ESTA LINHA É A MAIS IMPORTANTE
-    window.location.href = `https://wa.me/258867335175?text=${encodeURIComponent(mensagem)}`;
+    alert("botão está a funcionar");
 }
