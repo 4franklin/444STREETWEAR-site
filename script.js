@@ -84,3 +84,14 @@ function openModal(img1, img2 = "") {
 function closeModal() {
     document.getElementById("modal").style.display = "none";
 }
+
+function checkout() {
+    let mensagem = gerarMensagem();
+
+    mensagem += "💳 *Pagamento*%0A";
+    mensagem += "M-Pesa: 845714494%0A";
+    mensagem += "e-Mola: 867335175%0A%0A";
+    mensagem += "📩 Envie o comprovativo.";
+
+    window.open(`https://wa.me/258867335175?text=${mensagem}`);
+}
